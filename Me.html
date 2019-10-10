@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<main>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac toe</title>
+<style>
+#box {
+    text-align: center;
+    argin-right:225px;
+    margin : 0 auto;
+    margin-top: 75px;
+    background-color: cornflowerblue;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+
+    }
+
+.box1{
+margin: auto;
+ text-align: center;
+  background-color: black;
+  color: #fff;
+  width: 200px;
+  
+}
+
+.butt {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 4px;
+  cursor: pointer;
+  height : 80px;
+  width : 80px;
+}
+#pp{
+  background-color: black;
+color: white;
+}
+
+</style>
+</head>
+
+<body style="background-color:silver">
+
+<div id="box">
+<p style="font-size: 30px"> tic tac toe</p>
+<pre>Player1 : X    and    Player2 : O</pre>
+
+<div class="box1">
+<input type="button" id="pp" value="Player1 turn !">
+</div>
+
+
+<table style="margin: auto" >
+<tr>
+<td><input class="butt" type="button"  id="b1"  onclick="btn1()"></td>
+<td><input class="butt" type="button" id="b2"  onclick="btn2()"></td>
+<td><input class="butt" type="button" id="b3"  onclick="btn3()"></td></tr>
+<tr>
+<td><input class="butt" type="button" id="b4"  onclick="btn4()"></td>
+<td><input class="butt" type="button" id="b5"  onclick="btn5()"></td>
+<td><input class="butt" type="button" id="b6"   onclick="btn6()"></td></tr>
+<tr>
+<td><input class="butt" type="button"  id="b7" onclick="btn7()"></td>
+<td><input class="butt" type="button"  id="b8"  onclick="btn8()"></td>
+<td><input class="butt" type="button" id="b9"  onclick="btn9()"></td>
+</tr>
+</table>
+
+<br>
+<button  style="color:cornflowerblue" onclick="abcd()">Reset</button>      
+
+</div>
+
+<script>
+ var a=0,x1=0,o1=0,x2=0,o2=0,x3=0,o3=0,x4=0,o4=0,x5=0,o5=0,x6=0,o6=0,x7=0,o7=0,x8=0,o8=0,x9=0,o9=0,pop=1;
+ 
+ function btn1(){
+ if(a%2==0 && document.getElementById("b1").value==''){ document.getElementById("b1").value="X"; document.getElementById("pp").value="Player2 turn !"; a++; x1=1; asd();}
+ else {if(document.getElementById("b1").value==''){document.getElementById("b1").value="O"; document.getElementById("pp").value="Player1 turn !";a++; o1=1; asd()}}
+}
+function btn2(){
+ if(a%2==0 && document.getElementById("b2").value==''){ document.getElementById("b2").value="X";document.getElementById("pp").value="Player2 turn !"; a++; x2=1; asd();}
+ else {if(document.getElementById("b2").value==''){document.getElementById("b2").value="O";document.getElementById("pp").value="Player1 turn !"; a++; o2=1;asd();}}
+}
+function btn3(){
+ if(a%2==0 && document.getElementById("b3").value==''){ document.getElementById("b3").value="X";document.getElementById("pp").value="Player2 turn !"; a++;x3=1;asd();}
+ else {if(document.getElementById("b3").value==''){document.getElementById("b3").value="O";document.getElementById("pp").value="Player1 turn !"; a++; o3=1;asd();}}
+}
+function btn4(){
+ if(a%2==0 && document.getElementById("b4").value==''){ document.getElementById("b4").value="X";document.getElementById("pp").value="Player2 turn !"; a++;x4=1;asd();}
+ else {if(document.getElementById("b4").value==''){document.getElementById("b4").value="O";document.getElementById("pp").value="Player1 turn !"; a++;o4=1;asd();}}
+}
+
+ function btn5(){
+ if(a%2==0 && document.getElementById("b5").value==''){ document.getElementById("b5").value="X";document.getElementById("pp").value="Player2 turn !"; a++; x5=1;asd();}
+ else {if(document.getElementById("b5").value==''){document.getElementById("b5").value="O";document.getElementById("pp").value="Player1 turn !"; a++; o5=1;asd();}}
+}
+function btn6(){
+ if(a%2==0 && document.getElementById("b6").value==''){ document.getElementById("b6").value="X";document.getElementById("pp").value="Player2 turn !"; a++; x6=1;asd();}
+ else {if(document.getElementById("b6").value==''){document.getElementById("b6").value="O";document.getElementById("pp").value="Player1 turn !"; a++;o6=1;asd();}}
+}
+ function btn7(){
+ if(a%2==0  && document.getElementById("b7").value==''){ document.getElementById("b7").value="X";document.getElementById("pp").value="Player2 turn !"; a++;x7=1;asd();}
+ else {if(document.getElementById("b7").value==''){document.getElementById("b7").value="O";document.getElementById("pp").value="Player1 turn !"; a++; o7=1;asd();}}
+}
+function btn8(){
+ if(a%2==0 && document.getElementById("b8").value==''){ document.getElementById("b8").value="X";document.getElementById("pp").value="Player2 turn !"; a++; x8=1;asd();}
+ else {if(document.getElementById("b8").value==''){document.getElementById("b8").value="O";document.getElementById("pp").value="Player1 turn !"; a++; o8=1;asd();asd();}}
+}
+function btn9(){
+ if(a%2==0 && document.getElementById("b9").value==''){ document.getElementById("b9").value="X";document.getElementById("pp").value="Player2 turn !"; a++; x9=1;asd();}
+ else {if(document.getElementById("b9").value==''){document.getElementById("b9").value="O"; document.getElementById("pp").value="Player1 turn !"; a++; o9=1;asd();}}
+}
+
+function asd()
+{
+if((x1 && x2) && x3) {alert("Player1 Win !"); dis();}
+if(x1 && x4 && x7)  {alert("Player1 Win !"); dis();}
+if(x1 && x5 && x9) {alert("Player1 Win !"); dis();}
+if(x5 && x2 && x8){alert("Player1 Win !"); dis();}
+if(x9 && x6 && x3){alert("Player1 Win !"); dis();}
+if(x7 && x5 && x3){alert("Player1 Win !"); dis();}
+if(x7 && x8 && x9){alert("Player1 Win !"); dis();}
+if(x4 && x5 && x6){alert("Player1 Win !"); dis();}
+if(o1 && o2 && o3){alert("Player2 Win !"); dis();}
+if(o1 && o4 && o7){alert("Player2 Win !"); dis();}
+if(o1 && o5 && o9){alert("Player2 Win !"); dis();}
+if(o5 && o2 && o8){alert("Player2 Win !"); dis();}
+if(o9 && o6 && o3){alert("Player2 Win !"); dis();}
+if(o7 && o5 && o3){alert("Player2 Win !"); dis();}
+if(o7 && o8 && o9){alert("Player2 Win !"); dis();}
+if(o4 && o5 && o6){alert("Player2 Win !"); dis();}
+}
+
+function dis()
+{
+  document.getElementById("b1").disabled=true;
+ document.getElementById("b2").disabled=true;
+document.getElementById("b3").disabled=true;
+document.getElementById("b4").disabled=true;
+document.getElementById("b5").disabled=true;
+document.getElementById("b6").disabled=true;
+document.getElementById("b7").disabled=true;
+document.getElementById("b8").disabled=true;
+document.getElementById("b9").disabled=true;
+}
+
+function abcd()
+{
+  a=0;x1=0;o1=0;x2=0;o2=0;x3=0;o3=0;x4=0;o4=0;x5=0;o5=0;x6=0;o6=0;x7=0;o7=0;x8=0;o8=0;x9=0;o9=0;
+
+
+  document.getElementById("b1").disabled=false;
+ document.getElementById("b2").disabled=false;
+document.getElementById("b3").disabled=false;
+document.getElementById("b4").disabled=false;
+document.getElementById("b5").disabled=false;
+document.getElementById("b6").disabled=false;
+document.getElementById("b7").disabled=false;
+document.getElementById("b8").disabled=false;
+document.getElementById("b9").disabled=false;
+
+document.getElementById("b1").value='';
+document.getElementById("b2").value='';
+document.getElementById("b3").value='';
+document.getElementById("b4").value='';
+document.getElementById("b5").value='';
+document.getElementById("b6").value='';
+document.getElementById("b7").value='';
+document.getElementById("b8").value='';
+document.getElementById("b9").value='';
+document.getElementById("pp").value="Plyer1 turn !";
+}
+
+
+</script>
+
+</body>
+</main>
+</html>
